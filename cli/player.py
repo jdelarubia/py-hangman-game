@@ -1,8 +1,8 @@
-"""user.py
+"""player.py
 """
 
 
-class User:
+class Player:
     def __init__(self, nickname: str, score: int) -> None:
         self._nickname = nickname.lower()
         self._score = score

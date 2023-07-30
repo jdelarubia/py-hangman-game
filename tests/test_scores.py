@@ -3,7 +3,7 @@
 
 import unittest
 from cli.scores import Scores
-from cli.user import User
+from cli.player import Player
 
 
 class TestScores(unittest.TestCase):

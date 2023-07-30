@@ -1,10 +1,10 @@
 import unittest
-from cli.user import User
+from cli.player import Player
 
 
 class TestUser(unittest.TestCase):
     def setUp(self) -> None:
-        self.test_user = User(nickname="Johnny", score=0)
+        self.test_user = Player(nickname="Johnny", score=0)
 
     def test_nickname_dont_match(self) -> None:
         current = self.test_user.nickname
@@ -15,9 +15,7 @@ class TestUser(unittest.TestCase):
     def test_nickname_match(self) -> None:
         current = self.test_user.nickname
         expected = "johnny"
-        self.assertEqual(
-            current, expected, f"nicknames don't match, {current} != {expected}"
-        )
+        self.assertEqual(current, expected, f"nicknames don't match, {current} != {expected}")
 
     def test_initial_score_is_zero(self) -> None:
         current = self.test_user.score
