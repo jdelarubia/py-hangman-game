@@ -1,5 +1,6 @@
 {
-    "test": 2,
-    "high": 5,
-    "low": 0
+    "test": {"wins": 2, "losses": 1},
+    "high": {"wins": 5, "losses": 0},
+    "low": {"wins": 0, "losses": 0},
+    "super long nickname": {"wins": 3, "losses": 2}
 }
