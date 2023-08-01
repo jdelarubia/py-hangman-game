@@ -16,7 +16,10 @@ class Leaderboard:
 
     def load(self) -> None:
         with open(self.filename, "r") as leaderboard:
-            leaderboard = json.load(leaderboard)
+            data = json.load(leaderboard)
+        leaderboard = {}
+        for player, score in data.items():
+            leaderboard[player] = {"wins": score["wins"], "losses": score["losses"]}
         return leaderboard
 
     def save(self) -> None:
